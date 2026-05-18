@@ -141,7 +141,7 @@ function Index() {
               className="w-full h-full object-cover"
               poster={heroImg}
             >
-              <source src="/__l5e/assets-v1/60f28dc5-d471-424d-ad69-15d15d3d60c5/hero-bg.mp4" type="video/mp4" />
+              <source src="src/assets/PixVerse_V6_Image_Text_540P_Futuristic_cinemat.mp4" type="video/mp4" />
             </video>
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="h-16 w-16 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow-lg">

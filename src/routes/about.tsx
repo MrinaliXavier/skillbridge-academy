@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import teamImg from "@/assets/about-team.jpg";
+import teamImg from "@/assets/pic 1.png";
 import { FloatingOrbs } from "@/components/FloatingOrbs";
 import { AnimatedSection } from "@/components/AnimatedSection";
 
