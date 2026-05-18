@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { AnimatedSection } from "@/components/AnimatedSection";
+import { FloatingOrbs } from "@/components/FloatingOrbs";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { useState } from "react";
 
