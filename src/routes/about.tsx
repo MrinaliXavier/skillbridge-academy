@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import teamImg from "@/assets/about-team.jpg";
+import { FloatingOrbs } from "@/components/FloatingOrbs";
+import { AnimatedSection } from "@/components/AnimatedSection";
 
 export const Route = createFileRoute("/about")({
   component: About,
