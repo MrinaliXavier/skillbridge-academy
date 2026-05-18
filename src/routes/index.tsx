@@ -1,6 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-student.jpg";
-import { Languages, Clock, GraduationCap, Target, ArrowRight, Sparkles } from "lucide-react";
+import { FloatingOrbs } from "@/components/FloatingOrbs";
+import { MarqueeStrip } from "@/components/MarqueeStrip";
+import { AnimatedSection } from "@/components/AnimatedSection";
+import { Languages, Clock, GraduationCap, Target, ArrowRight, Sparkles, Play } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -44,6 +47,7 @@ function Index() {
       {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-soft" />
+        <FloatingOrbs />
         <div className="relative mx-auto max-w-7xl px-6 pt-16 pb-24 lg:pt-24 lg:pb-32 grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-3 py-1 text-xs font-medium text-muted-foreground">
@@ -86,7 +90,7 @@ function Index() {
           </div>
 
           <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-warm opacity-20 blur-3xl rounded-[3rem]" />
+            <div className="absolute -inset-4 bg-gradient-warm opacity-20 blur-3xl rounded-[3rem] animate-pulse" />
             <img
               src={heroImg}
               alt="Young Sri Lankan student learning on a smartphone"
@@ -105,6 +109,8 @@ function Index() {
         </div>
       </section>
 
+      <MarqueeStrip />
+
       {/* MISSION STRIP */}
       <section className="bg-primary text-primary-foreground">
         <div className="mx-auto max-w-7xl px-6 py-14 grid md:grid-cols-3 gap-8 items-start">
@@ -117,26 +123,54 @@ function Index() {
         </div>
       </section>
 
+      {/* VIDEO STORY */}
+      <section className="mx-auto max-w-7xl px-6 py-24">
+        <AnimatedSection className="text-center max-w-2xl mx-auto mb-12">
+          <span className="text-sm font-semibold uppercase tracking-widest text-secondary">See the vision</span>
+          <h2 className="mt-3 text-4xl md:text-5xl font-semibold tracking-tight">
+            Learning that moves with you.
+          </h2>
+        </AnimatedSection>
+        <AnimatedSection variant="scale-in" delay={150}>
+          <div className="relative rounded-3xl overflow-hidden shadow-elegant aspect-video bg-muted">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+              poster={heroImg}
+            >
+              <source src="/__l5e/assets-v1/60f28dc5-d471-424d-ad69-15d15d3d60c5/hero-bg.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div className="h-16 w-16 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow-lg">
+                <Play className="h-6 w-6 text-primary ml-1" />
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+      </section>
+
       {/* FEATURES */}
       <section className="mx-auto max-w-7xl px-6 py-24">
-        <div className="max-w-2xl">
+        <AnimatedSection className="max-w-2xl">
           <span className="text-sm font-semibold uppercase tracking-widest text-secondary">Why Winners</span>
           <h2 className="mt-3 text-4xl md:text-5xl font-semibold tracking-tight">
             Built for the way young Sri Lankans actually learn.
           </h2>
-        </div>
+        </AnimatedSection>
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {features.map((f) => (
-            <div
-              key={f.title}
-              className="group rounded-2xl border border-border bg-card p-6 hover:shadow-elegant hover:-translate-y-1 transition-all duration-300"
-            >
-              <div className="h-12 w-12 rounded-xl bg-accent flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition">
-                <f.icon className="h-6 w-6" />
+          {features.map((f, i) => (
+            <AnimatedSection key={f.title} delay={i * 100}>
+              <div className="group rounded-2xl border border-border bg-card p-6 hover:shadow-elegant hover:-translate-y-1 transition-all duration-300">
+                <div className="h-12 w-12 rounded-xl bg-accent flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground transition">
+                  <f.icon className="h-6 w-6" />
+                </div>
+                <h3 className="mt-5 text-lg font-semibold">{f.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{f.body}</p>
               </div>
-              <h3 className="mt-5 text-lg font-semibold">{f.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{f.body}</p>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
       </section>
@@ -144,42 +178,46 @@ function Index() {
       {/* VISION */}
       <section className="bg-muted/40 border-y border-border/60">
         <div className="mx-auto max-w-7xl px-6 py-24 grid lg:grid-cols-5 gap-10 items-center">
-          <div className="lg:col-span-2">
+          <AnimatedSection className="lg:col-span-2">
             <span className="text-sm font-semibold uppercase tracking-widest text-secondary">Our vision</span>
             <h2 className="mt-3 text-4xl md:text-5xl font-semibold tracking-tight">
               A talent pipeline for South Asia.
             </h2>
-          </div>
-          <p className="lg:col-span-3 text-xl text-muted-foreground leading-relaxed text-balance">
-            To build a foundational digital talent pipeline for South Asia — transforming
-            <span className="text-foreground font-medium"> millions of ambitious youth</span> into
-            day-one-ready global professionals.
-          </p>
+          </AnimatedSection>
+          <AnimatedSection className="lg:col-span-3" delay={150}>
+            <p className="text-xl text-muted-foreground leading-relaxed text-balance">
+              To build a foundational digital talent pipeline for South Asia — transforming
+              <span className="text-foreground font-medium"> millions of ambitious youth</span> into
+              day-one-ready global professionals.
+            </p>
+          </AnimatedSection>
         </div>
       </section>
 
       {/* CTA */}
       <section className="mx-auto max-w-7xl px-6 py-24">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-hero text-primary-foreground p-10 md:p-16 shadow-elegant">
-          <div className="absolute -top-20 -right-20 h-72 w-72 rounded-full bg-gradient-warm opacity-30 blur-3xl" />
-          <div className="relative max-w-2xl">
-            <h2 className="text-4xl md:text-5xl font-semibold tracking-tight">
-              Join us in shaping South Asia's next generation of professionals.
-            </h2>
-            <p className="mt-4 text-lg opacity-90">
-              Whether you're a learner, an instructor, or an investor — there's a place for you
-              at Winners College.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/investors" className="inline-flex items-center gap-2 rounded-full bg-secondary px-6 py-3 text-sm font-medium text-secondary-foreground shadow-warm hover:opacity-90 transition">
-                Partner with us <ArrowRight className="h-4 w-4" />
-              </Link>
-              <Link to="/contact" className="inline-flex items-center rounded-full border border-white/30 px-6 py-3 text-sm font-medium hover:bg-white/10 transition">
-                Get in touch
-              </Link>
+        <AnimatedSection>
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-hero text-primary-foreground p-10 md:p-16 shadow-elegant">
+            <div className="absolute -top-20 -right-20 h-72 w-72 rounded-full bg-gradient-warm opacity-30 blur-3xl" />
+            <div className="relative max-w-2xl">
+              <h2 className="text-4xl md:text-5xl font-semibold tracking-tight">
+                Join us in shaping South Asia's next generation of professionals.
+              </h2>
+              <p className="mt-4 text-lg opacity-90">
+                Whether you're a learner, an instructor, or an investor — there's a place for you
+                at Winners College.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link to="/investors" className="inline-flex items-center gap-2 rounded-full bg-secondary px-6 py-3 text-sm font-medium text-secondary-foreground shadow-warm hover:opacity-90 transition">
+                  Partner with us <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link to="/contact" className="inline-flex items-center rounded-full border border-white/30 px-6 py-3 text-sm font-medium hover:bg-white/10 transition">
+                  Get in touch
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
+        </AnimatedSection>
       </section>
     </>
   );

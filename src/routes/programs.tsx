@@ -1,4 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { AnimatedSection } from "@/components/AnimatedSection";
+import { FloatingOrbs } from "@/components/FloatingOrbs";
 import { Languages, Clock, GraduationCap, Target, Smartphone, Infinity as InfinityIcon, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/programs")({
@@ -26,40 +28,49 @@ const pillars = [
 function Programs() {
   return (
     <>
-      <section className="mx-auto max-w-7xl px-6 pt-20 pb-14">
-        <span className="text-sm font-semibold uppercase tracking-widest text-secondary">Programs</span>
-        <h1 className="mt-4 text-5xl md:text-6xl font-semibold tracking-tight max-w-3xl text-balance">
-          Practical skills. Real instructors. Your language.
-        </h1>
-        <p className="mt-6 max-w-2xl text-lg text-muted-foreground text-balance">
-          Every Winners College program is engineered around six core promises — the things that
-          make the difference between watching a course and actually getting hired.
-        </p>
+      <section className="relative overflow-hidden">
+        <FloatingOrbs />
+        <div className="relative mx-auto max-w-7xl px-6 pt-20 pb-14">
+          <AnimatedSection>
+            <span className="text-sm font-semibold uppercase tracking-widest text-secondary">Programs</span>
+            <h1 className="mt-4 text-5xl md:text-6xl font-semibold tracking-tight max-w-3xl text-balance">
+              Practical skills. Real instructors. Your language.
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg text-muted-foreground text-balance">
+              Every Winners College program is engineered around six core promises — the things that
+              make the difference between watching a course and actually getting hired.
+            </p>
+          </AnimatedSection>
+        </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-24">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {pillars.map((p) => (
-            <div key={p.title} className="rounded-2xl border border-border bg-card p-8 hover:shadow-elegant transition-all duration-300">
-              <div className="h-12 w-12 rounded-xl bg-gradient-warm flex items-center justify-center text-secondary-foreground">
-                <p.icon className="h-6 w-6" />
+          {pillars.map((p, i) => (
+            <AnimatedSection key={p.title} delay={i * 80}>
+              <div className="rounded-2xl border border-border bg-card p-8 hover:shadow-elegant transition-all duration-300">
+                <div className="h-12 w-12 rounded-xl bg-gradient-warm flex items-center justify-center text-secondary-foreground">
+                  <p.icon className="h-6 w-6" />
+                </div>
+                <h3 className="mt-5 text-xl font-semibold">{p.title}</h3>
+                <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{p.body}</p>
               </div>
-              <h3 className="mt-5 text-xl font-semibold">{p.title}</h3>
-              <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{p.body}</p>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-24">
-        <div className="rounded-3xl bg-gradient-hero text-primary-foreground p-10 md:p-16 grid md:grid-cols-3 gap-10 items-center shadow-elegant">
-          <h2 className="md:col-span-2 text-3xl md:text-4xl font-semibold tracking-tight">
-            Coming soon: the Winners College app — your learning, in your pocket.
-          </h2>
-          <Link to="/contact" className="justify-self-start md:justify-self-end inline-flex items-center gap-2 rounded-full bg-secondary px-6 py-3 text-sm font-medium text-secondary-foreground shadow-warm hover:opacity-90 transition">
-            Get early access <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
+        <AnimatedSection>
+          <div className="rounded-3xl bg-gradient-hero text-primary-foreground p-10 md:p-16 grid md:grid-cols-3 gap-10 items-center shadow-elegant">
+            <h2 className="md:col-span-2 text-3xl md:text-4xl font-semibold tracking-tight">
+              Coming soon: the Winners College app — your learning, in your pocket.
+            </h2>
+            <Link to="/contact" className="justify-self-start md:justify-self-end inline-flex items-center gap-2 rounded-full bg-secondary px-6 py-3 text-sm font-medium text-secondary-foreground shadow-warm hover:opacity-90 transition">
+              Get early access <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </AnimatedSection>
       </section>
     </>
   );
