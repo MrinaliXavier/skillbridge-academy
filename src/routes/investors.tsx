@@ -1,4 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { AnimatedSection } from "@/components/AnimatedSection";
+import { FloatingOrbs } from "@/components/FloatingOrbs";
 import { TrendingUp, Users, Globe2, Rocket, ArrowRight, CheckCircle2 } from "lucide-react";
 
 export const Route = createFileRoute("/investors")({
@@ -39,50 +41,57 @@ function Investors() {
   return (
     <>
       <section className="relative overflow-hidden bg-gradient-hero text-primary-foreground">
+        <FloatingOrbs />
         <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-gradient-warm opacity-30 blur-3xl" />
         <div className="relative mx-auto max-w-7xl px-6 py-24 lg:py-32">
-          <span className="text-sm font-semibold uppercase tracking-widest opacity-80">For investors</span>
-          <h1 className="mt-4 text-5xl md:text-7xl font-semibold tracking-tight max-w-4xl text-balance">
-            Build South Asia's talent pipeline with us.
-          </h1>
-          <p className="mt-6 max-w-2xl text-lg opacity-90 text-balance">
-            Winners College is solving the employability gap for a generation of ambitious youth —
-            in the languages they think in, on the devices they already carry.
-          </p>
+          <AnimatedSection>
+            <span className="text-sm font-semibold uppercase tracking-widest opacity-80">For investors</span>
+            <h1 className="mt-4 text-5xl md:text-7xl font-semibold tracking-tight max-w-4xl text-balance">
+              Build South Asia's talent pipeline with us.
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg opacity-90 text-balance">
+              Winners College is solving the employability gap for a generation of ambitious youth —
+              in the languages they think in, on the devices they already carry.
+            </p>
+          </AnimatedSection>
           <div className="mt-10 grid sm:grid-cols-3 gap-6 max-w-4xl">
-            {stats.map((s) => (
-              <div key={s.v} className="rounded-2xl bg-white/10 border border-white/20 backdrop-blur p-6">
-                <div className="font-display text-4xl">{s.k}</div>
-                <div className="mt-2 text-sm opacity-85">{s.v}</div>
-              </div>
+            {stats.map((s, i) => (
+              <AnimatedSection key={s.v} delay={i * 100}>
+                <div className="rounded-2xl bg-white/10 border border-white/20 backdrop-blur p-6">
+                  <div className="font-display text-4xl">{s.k}</div>
+                  <div className="mt-2 text-sm opacity-85">{s.v}</div>
+                </div>
+              </AnimatedSection>
             ))}
           </div>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-24">
-        <div className="max-w-2xl">
+        <AnimatedSection className="max-w-2xl">
           <span className="text-sm font-semibold uppercase tracking-widest text-secondary">The opportunity</span>
           <h2 className="mt-3 text-4xl md:text-5xl font-semibold tracking-tight">
             A regional market, served the way it actually learns.
           </h2>
-        </div>
+        </AnimatedSection>
         <div className="mt-14 grid sm:grid-cols-2 gap-6">
-          {opportunity.map((o) => (
-            <div key={o.title} className="rounded-2xl border border-border bg-card p-8 hover:shadow-elegant transition">
-              <div className="h-12 w-12 rounded-xl bg-accent text-primary flex items-center justify-center">
-                <o.icon className="h-6 w-6" />
+          {opportunity.map((o, i) => (
+            <AnimatedSection key={o.title} delay={i * 100}>
+              <div className="rounded-2xl border border-border bg-card p-8 hover:shadow-elegant transition">
+                <div className="h-12 w-12 rounded-xl bg-accent text-primary flex items-center justify-center">
+                  <o.icon className="h-6 w-6" />
+                </div>
+                <h3 className="mt-5 text-xl font-semibold">{o.title}</h3>
+                <p className="mt-2 text-muted-foreground leading-relaxed">{o.body}</p>
               </div>
-              <h3 className="mt-5 text-xl font-semibold">{o.title}</h3>
-              <p className="mt-2 text-muted-foreground leading-relaxed">{o.body}</p>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
       </section>
 
       <section className="bg-muted/40 border-y border-border/60">
         <div className="mx-auto max-w-7xl px-6 py-24 grid lg:grid-cols-2 gap-12 items-center">
-          <div>
+          <AnimatedSection>
             <span className="text-sm font-semibold uppercase tracking-widest text-secondary">Why now</span>
             <h2 className="mt-3 text-4xl md:text-5xl font-semibold tracking-tight">
               The right product, in the right market, at the right moment.
@@ -92,31 +101,35 @@ function Investors() {
               practical, job-ready talent. And no one is serving Sri Lankan youth in their
               native languages with industry-grade content. We are.
             </p>
-          </div>
+          </AnimatedSection>
           <ul className="space-y-4">
-            {why.map((w) => (
-              <li key={w} className="flex items-start gap-3 rounded-xl bg-card border border-border p-5">
-                <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 shrink-0" />
-                <span className="text-foreground">{w}</span>
-              </li>
+            {why.map((w, i) => (
+              <AnimatedSection key={w} delay={i * 80}>
+                <li className="flex items-start gap-3 rounded-xl bg-card border border-border p-5">
+                  <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 shrink-0" />
+                  <span className="text-foreground">{w}</span>
+                </li>
+              </AnimatedSection>
             ))}
           </ul>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-24">
-        <div className="rounded-3xl bg-gradient-warm text-secondary-foreground p-10 md:p-16 shadow-warm">
-          <h2 className="text-4xl md:text-5xl font-semibold tracking-tight max-w-2xl">
-            Let's talk about what we can build together.
-          </h2>
-          <p className="mt-4 max-w-xl text-lg opacity-90">
-            We're raising to expand our trilingual catalogue, launch our mobile app, and scale
-            beyond Sri Lanka. Request our investor deck.
-          </p>
-          <Link to="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-foreground text-background px-6 py-3 text-sm font-medium hover:opacity-90 transition">
-            Request the deck <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
+        <AnimatedSection>
+          <div className="rounded-3xl bg-gradient-warm text-secondary-foreground p-10 md:p-16 shadow-warm">
+            <h2 className="text-4xl md:text-5xl font-semibold tracking-tight max-w-2xl">
+              Let's talk about what we can build together.
+            </h2>
+            <p className="mt-4 max-w-xl text-lg opacity-90">
+              We're raising to expand our trilingual catalogue, launch our mobile app, and scale
+              beyond Sri Lanka. Request our investor deck.
+            </p>
+            <Link to="/contact" className="mt-8 inline-flex items-center gap-2 rounded-full bg-foreground text-background px-6 py-3 text-sm font-medium hover:opacity-90 transition">
+              Request the deck <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </AnimatedSection>
       </section>
     </>
   );
