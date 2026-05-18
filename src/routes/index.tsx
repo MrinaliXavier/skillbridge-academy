@@ -1,6 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImg from "@/assets/hero-student.jpg";
-import { Languages, Clock, GraduationCap, Target, ArrowRight, Sparkles } from "lucide-react";
+import { FloatingOrbs } from "@/components/FloatingOrbs";
+import { MarqueeStrip } from "@/components/MarqueeStrip";
+import { AnimatedSection } from "@/components/AnimatedSection";
+import { Languages, Clock, GraduationCap, Target, ArrowRight, Sparkles, Play } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: Index,
