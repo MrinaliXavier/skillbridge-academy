@@ -1,4 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { AnimatedSection } from "@/components/AnimatedSection";
+import { FloatingOrbs } from "@/components/FloatingOrbs";
 import { Languages, Clock, GraduationCap, Target, Smartphone, Infinity as InfinityIcon, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/programs")({
