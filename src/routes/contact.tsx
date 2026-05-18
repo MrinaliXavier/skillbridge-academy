@@ -31,11 +31,20 @@ function Contact() {
         <div className="mt-10 space-y-5">
           <div className="flex items-center gap-4">
             <div className="h-11 w-11 rounded-xl bg-accent text-primary flex items-center justify-center">
+              <Phone className="h-5 w-5" />
+            </div>
+            <div>
+              <div className="text-sm text-muted-foreground">Phone</div>
+              <a href="tel:0769321191" className="font-medium hover:text-primary">076 932 1191</a>
+            </div>
+          </div>
+          <div className="flex items-center gap-4">
+            <div className="h-11 w-11 rounded-xl bg-accent text-primary flex items-center justify-center">
               <Mail className="h-5 w-5" />
             </div>
             <div>
               <div className="text-sm text-muted-foreground">Email</div>
-              <a href="mailto:hello@winnerscollege.lk" className="font-medium hover:text-primary">hello@winnerscollege.lk</a>
+              <a href="mailto:jenistonapppostha@gmail.com" className="font-medium hover:text-primary">jenistonapppostha@gmail.com</a>
             </div>
           </div>
           <div className="flex items-center gap-4">
@@ -43,8 +52,8 @@ function Contact() {
               <MapPin className="h-5 w-5" />
             </div>
             <div>
-              <div className="text-sm text-muted-foreground">Based in</div>
-              <div className="font-medium">Colombo, Sri Lanka</div>
+              <div className="text-sm text-muted-foreground">Address</div>
+              <div className="font-medium">145/19C High Level Road, Colombo 6</div>
             </div>
           </div>
         </div>

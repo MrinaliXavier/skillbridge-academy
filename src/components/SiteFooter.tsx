@@ -16,13 +16,6 @@ export function SiteFooter() {
           </p>
         </div>
         <div>
-          <h4 className="text-sm font-semibold mb-3">Contact</h4>
-          <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>hello@winnerscollege.lk</li>
-            <li>Colombo, Sri Lanka</li>
-          </ul>
-        </div>
-        <div>
           <h4 className="text-sm font-semibold mb-3">Explore</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li><Link to="/about" className="hover:text-foreground">About</Link></li>
@@ -34,8 +27,9 @@ export function SiteFooter() {
         <div>
           <h4 className="text-sm font-semibold mb-3">Contact</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li>hello@winnerscollege.lk</li>
-            <li>Colombo, Sri Lanka</li>
+            <li><a href="tel:0769321191" className="hover:text-foreground">076 932 1191</a></li>
+            <li><a href="mailto:jenistonapppostha@gmail.com" className="hover:text-foreground">jenistonapppostha@gmail.com</a></li>
+            <li>145/19C High Level Road, Colombo 6</li>
           </ul>
         </div>
       </div>
