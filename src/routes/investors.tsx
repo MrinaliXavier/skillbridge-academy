@@ -1,4 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { AnimatedSection } from "@/components/AnimatedSection";
+import { FloatingOrbs } from "@/components/FloatingOrbs";
 import { TrendingUp, Users, Globe2, Rocket, ArrowRight, CheckCircle2 } from "lucide-react";
 
 export const Route = createFileRoute("/investors")({
