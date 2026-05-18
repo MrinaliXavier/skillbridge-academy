@@ -16,6 +16,13 @@ export function SiteFooter() {
           </p>
         </div>
         <div>
+          <h4 className="text-sm font-semibold mb-3">Contact</h4>
+          <ul className="space-y-2 text-sm text-muted-foreground">
+            <li>hello@winnerscollege.lk</li>
+            <li>Colombo, Sri Lanka</li>
+          </ul>
+        </div>
+        <div>
           <h4 className="text-sm font-semibold mb-3">Explore</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
             <li><Link to="/about" className="hover:text-foreground">About</Link></li>
