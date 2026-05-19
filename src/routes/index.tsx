@@ -127,7 +127,7 @@ function Index() {
       </section>
 
       {/* VIDEO STORY */}
-      <section className="mx-auto max-w-7xl px-6 py-24">
+      <section id="story" className="mx-auto max-w-7xl px-6 py-24">
         <AnimatedSection className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-sm font-semibold uppercase tracking-widest text-secondary">See the vision</span>
           <h2 className="mt-3 text-4xl md:text-5xl font-semibold tracking-tight">

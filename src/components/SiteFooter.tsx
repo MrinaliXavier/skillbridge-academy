@@ -8,16 +8,16 @@ export function SiteFooter() {
         <div className="md:col-span-2">
           <div className="flex items-center gap-2">
             <img src={logo} alt="Winners College" className="h-10 w-10 rounded-full" />
-            <span className="font-display text-lg font-semibold">Winners College</span>
+            <span className="font-display text-xl md:text-2xl font-semibold">Winners College</span>
           </div>
-          <p className="mt-4 text-sm text-muted-foreground max-w-sm">
+          <p className="mt-4 text-base text-muted-foreground max-w-sm">
             Sri Lanka's first trilingual microlearning platform — building a day-one-ready
             digital talent pipeline for South Asia.
           </p>
         </div>
         <div>
-          <h4 className="text-sm font-semibold mb-3">Explore</h4>
-          <ul className="space-y-2 text-sm text-muted-foreground">
+          <h4 className="text-base font-semibold mb-3">Explore</h4>
+          <ul className="space-y-2 text-base text-muted-foreground">
             <li><Link to="/about" className="hover:text-foreground">About</Link></li>
             <li><Link to="/programs" className="hover:text-foreground">Programs</Link></li>
             <li><Link to="/investors" className="hover:text-foreground">Investors</Link></li>
@@ -25,8 +25,8 @@ export function SiteFooter() {
           </ul>
         </div>
         <div>
-          <h4 className="text-sm font-semibold mb-3">Contact</h4>
-          <ul className="space-y-2 text-sm text-muted-foreground">
+          <h4 className="text-base font-semibold mb-3">Contact</h4>
+          <ul className="space-y-2 text-base text-muted-foreground">
             <li><a href="tel:0769321191" className="hover:text-foreground">076 932 1191</a></li>
             <li><a href="mailto:jenistonapppostha@gmail.com" className="hover:text-foreground">jenistonapppostha@gmail.com</a></li>
             <li>145/19C High Level Road, Colombo 6</li>
@@ -34,7 +34,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-border/60">
-        <div className="mx-auto max-w-7xl px-6 py-5 text-xs text-muted-foreground flex justify-between">
+        <div className="mx-auto max-w-7xl px-6 py-5 text-sm text-muted-foreground flex flex-col gap-2 md:flex-row md:justify-between">
           <span>© {new Date().getFullYear()} Winners College. All rights reserved.</span>
           <span>Sinhala · Tamil · English</span>
         </div>
