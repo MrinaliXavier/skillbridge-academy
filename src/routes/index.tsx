@@ -151,8 +151,8 @@ function Index() {
                 <Play className="h-6 w-6 text-primary ml-1" />
               </div>
             </div>
-          </AnimatedSection>
-        </div>
+          </div>
+        </AnimatedSection>
       </section>
 
       {/* FEATURES */}
