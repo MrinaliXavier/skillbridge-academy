@@ -126,33 +126,29 @@ function Index() {
         </div>
       </section>
 
-      {/* STORY / VIDEO with parallax frame */}
-      <section id="story" className="relative overflow-hidden bg-gradient-soft py-28">
-        <FloatingOrbs />
-        <div className="relative mx-auto max-w-7xl px-6">
-          <AnimatedSection className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-sm font-semibold uppercase tracking-widest text-secondary">See the vision</span>
-            <h2 className="mt-3 text-4xl md:text-5xl font-semibold tracking-tight">
-              Learning that moves with you.
-            </h2>
-          </AnimatedSection>
-          <AnimatedSection variant="scale-in" delay={150}>
-            <div className="group relative rounded-[2rem] overflow-hidden shadow-elegant aspect-video bg-muted">
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-[2000ms]"
-                poster={heroImg}
-              >
-                <source src="/__l5e/assets-v1/60f28dc5-d471-424d-ad69-15d15d3d60c5/hero-bg.mp4" type="video/mp4" />
-              </video>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="h-20 w-20 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow-lg ring-8 ring-white/20">
-                  <Play className="h-7 w-7 text-primary ml-1" />
-                </div>
+      {/* VIDEO STORY */}
+      <section className="mx-auto max-w-7xl px-6 py-24">
+        <AnimatedSection className="text-center max-w-2xl mx-auto mb-12">
+          <span className="text-sm font-semibold uppercase tracking-widest text-secondary">See the vision</span>
+          <h2 className="mt-3 text-4xl md:text-5xl font-semibold tracking-tight">
+            Learning that moves with you.
+          </h2>
+        </AnimatedSection>
+        <AnimatedSection variant="scale-in" delay={150}>
+          <div className="relative rounded-3xl overflow-hidden shadow-elegant aspect-video bg-muted">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+              poster={heroImg}
+            >
+              <source src="src/assets/PixVerse_V6_Image_Text_540P_Futuristic_cinemat.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div className="h-16 w-16 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow-lg">
+                <Play className="h-6 w-6 text-primary ml-1" />
               </div>
             </div>
           </AnimatedSection>
