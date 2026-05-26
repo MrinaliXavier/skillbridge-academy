@@ -12,14 +12,14 @@ const links = [
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-background/80 border-b border-border/60">
-      <div className="mx-auto max-w-7xl pl-4 pr-6 md:pl-6 md:pr-6 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="Winners College" className="h-12 w-12 rounded-full" />
-          <span className="font-display text-xl md:text-2xl font-semibold tracking-tight">
+      <div className="mx-auto max-w-7xl pl-3 pr-4 md:pl-4 md:pr-6 h-16 md:h-20 flex items-center">
+        <Link to="/" className="flex items-center gap-4">
+          <img src={logo} alt="Winners College" className="h-16 w-16 md:h-20 md:w-20 rounded-full" />
+          <span className="font-display text-xl md:text-2xl lg:text-3xl font-semibold tracking-tight">
             Winners <span className="text-primary">College</span>
           </span>
         </Link>
-        <nav className="hidden md:flex items-center gap-10">
+        <nav className="hidden md:flex flex-1 justify-center items-center gap-10">
           {links.map((l) => (
             <Link
               key={l.to}

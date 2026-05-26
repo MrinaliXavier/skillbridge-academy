@@ -6,9 +6,9 @@ export function SiteFooter() {
     <footer className="border-t border-border/60 bg-muted/40 mt-24">
       <div className="mx-auto max-w-7xl px-6 py-14 grid gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
-          <div className="flex items-center gap-2">
-            <img src={logo} alt="Winners College" className="h-10 w-10 rounded-full" />
-            <span className="font-display text-xl md:text-2xl font-semibold">Winners College</span>
+          <div className="flex items-center gap-3">
+            <img src={logo} alt="Winners College" className="h-16 w-16 md:h-16 md:w-16 rounded-full" />
+            <span className="font-display text-xl md:text-3xl font-semibold">Winners College</span>
           </div>
           <p className="mt-4 text-base text-muted-foreground max-w-sm">
             Sri Lanka's first trilingual microlearning platform — building a day-one-ready
