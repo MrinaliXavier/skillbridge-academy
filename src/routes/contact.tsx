@@ -48,7 +48,16 @@ function Contact() {
               </div>
               <div>
                 <div className="text-sm text-muted-foreground">Email</div>
-                <a href="mailto:jenistonapppostha@gmail.com" className="font-medium hover:text-primary">jenistonapppostha@gmail.com</a>
+                <a href="mailto:winnerscollege.co@gmail.com" className="font-medium hover:text-primary">winnerscollege.co@gmail.com</a>
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="h-11 w-11 rounded-xl bg-accent text-primary flex items-center justify-center">
+                <Mail className="h-5 w-5" />
+              </div>
+              <div>
+                <div className="text-sm text-muted-foreground">Founder Email</div>
+                <a href="mailto:ajeniston240899gmail.com" className="font-medium hover:text-primary">ajeniston240899gmail.com</a>
               </div>
             </div>
             <div className="flex items-center gap-4">

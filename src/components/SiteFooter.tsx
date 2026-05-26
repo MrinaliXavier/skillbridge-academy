@@ -28,7 +28,7 @@ export function SiteFooter() {
           <h4 className="text-base font-semibold mb-3">Contact</h4>
           <ul className="space-y-2 text-base text-muted-foreground">
             <li><a href="tel:0769321191" className="hover:text-foreground">+94 76 932 1191</a></li>
-            <li><a href="mailto:jenistonapppostha@gmail.com" className="hover:text-foreground">jenistonapppostha@gmail.com</a></li>
+            <li><a href="mailto:winnerscollege.co@gmail.com" className="hover:text-foreground">winnerscollege.co@gmail.com</a></li>
             
           </ul>
         </div>
