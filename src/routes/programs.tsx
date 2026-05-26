@@ -21,7 +21,7 @@ const pillars = [
   { icon: Smartphone, title: "Mobile-optimized", body: "Built for the phones young Sri Lankans already use. Learn anywhere, on any connection." },
   { icon: Clock, title: "Self-paced", body: "Pre-recorded lessons that fit your life — early morning, late night, between classes." },
   { icon: InfinityIcon, title: "Lifetime access", body: "Buy once, learn forever. Revisit content as the industry — and you — evolve." },
-  { icon: GraduationCap, title: "Expert instructors", body: "Practitioners from the industry's top companies share what actually works on the job." },
+  { icon: GraduationCap, title: "Field Experts", body: "Practitioners from the industry's top companies share what actually works on the job." },
   { icon: Target, title: "Implementation focus", body: "Step-by-step, tailored guidance you can apply on day one — no theoretical overload." },
 ];
 
@@ -34,7 +34,7 @@ function Programs() {
           <AnimatedSection>
             <span className="text-sm font-semibold uppercase tracking-widest text-secondary">Programs</span>
             <h1 className="mt-4 text-5xl md:text-6xl font-semibold tracking-tight max-w-3xl text-balance">
-              Practical skills. Real instructors. Your language.
+              Professional skills. Field experts. In your language.
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-muted-foreground text-balance">
               Every Winners College program is engineered around six core promises — the things that
