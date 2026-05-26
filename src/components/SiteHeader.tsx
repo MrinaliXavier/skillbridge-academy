@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo WC.jpeg";
 
 const links = [
   { to: "/", label: "Home" },
