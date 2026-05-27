@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import heroStage from "@/assets/hero-stage.jpg";
 import heroImg from "@/assets/hero-student.jpg";
 import aboutTeam from "@/assets/about-team.jpg";
+import trailerVideo from "@/assets/homepg trailer.mp4";
 import { FloatingOrbs } from "@/components/FloatingOrbs";
 import { MarqueeStrip } from "@/components/MarqueeStrip";
 import { AnimatedSection } from "@/components/AnimatedSection";
@@ -144,7 +145,7 @@ function Index() {
               className="w-full h-full object-cover"
               poster={heroImg}
             >
-              <source src="src/assets/homepg trailer.mp4" type="video/mp4" />
+              <source src={trailerVideo} type="video/mp4" />
             </video>
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
               <div className="h-16 w-16 rounded-full bg-white/90 backdrop-blur flex items-center justify-center shadow-lg">
